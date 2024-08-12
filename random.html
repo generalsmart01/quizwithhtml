@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Example</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="home">
+        <a href="index.html">Go to Home</a>
+    </div>
+    <div class="quiz-container">
+        <div class="question" data-correct="Paris">
+            <h3>Question 1: What is the capital of France?</h3>
+            <ul>
+                <li>Paris</li>
+                <li>London</li>
+                <li>Berlin</li>
+                <li>Madrid</li>
+            </ul>
+        </div>
+
+        <div class="question" data-correct="2">
+            <h3>Question 2: Which is the smallest prime number?</h3>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>5</li>
+            </ul>
+        </div>
+
+        <div class="question" data-correct="H2O">
+            <h3>Question 3: What is the chemical symbol for water?</h3>
+            <ul>
+                <li>H<sub>2</sub>O</li>
+                <li>O<sub>2</sub></li>
+                <li>CO<sub>2</sub></li>
+                <li>H<sub>2</sub></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="score-modal" class="modal">
+        <div class="modal-content">
+            <h2>Quiz Completed</h2>
+            <p id="score-text"></p>
+            <button onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="/main.js"></script>
+</body>
+
+</html>
