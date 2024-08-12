@@ -1,16 +1,18 @@
 let score = 0;
 const totalQuestions = document.querySelectorAll(".question").length;
 
-/**
- * Checks the selected answer upon user interaction.
- * Disables further clicks on options, highlights correct and incorrect answers,
- * updates the score, and shows a modal when all questions have been answered.
- * @param {Event} event - The event object triggered by the user interaction.
- */
+// Object to store the correct answers
+const correctAnswers = {
+  q1: "Paris",
+  q2: "2",
+  q3: "H2O",
+};
+
 const checkAnswer = (event) => {
   const selectedOption = event.target;
   const questionElement = selectedOption.closest(".question");
-  const correctAnswer = questionElement.dataset.correct;
+  const questionId = questionElement.id; // Get the question's ID
+  const correctAnswer = correctAnswers[questionId]; // Get the correct answer from the object
   const options = questionElement.querySelectorAll("li");
 
   // Disable further clicks on options
@@ -20,13 +22,16 @@ const checkAnswer = (event) => {
 
   if (selectedOption.textContent === correctAnswer) {
     selectedOption.classList.add("correct"); // Highlight correct answer
+    selectedOption.style.border = "2px solid green"; // Apply green border styling
     score++; // Update the score for correct answer
   } else {
     selectedOption.classList.add("incorrect"); // Highlight wrong answer
+    selectedOption.style.border = "2px solid red"; // Apply red border styling
     const correctOption = Array.from(options).find(
       (option) => option.textContent === correctAnswer
     );
     correctOption.classList.add("correct"); // Highlight correct answer
+    correctOption.style.border = "2px solid green"; // Apply green border styling to correct answer
   }
 
   // Check if all questions have been answered
@@ -38,12 +43,6 @@ const checkAnswer = (event) => {
   }
 };
 
-/**
- * Displays a modal with the user's score.
- *
- * This function retrieves the modal and score text elements from the DOM,
- * updates the score text with the user's score, and then displays the modal.
- */
 const showModal = () => {
   const modal = document.getElementById("score-modal");
   const scoreText = document.getElementById("score-text");
@@ -51,38 +50,21 @@ const showModal = () => {
   modal.style.display = "block";
 };
 
-/**
- * Closes the modal by setting its display style to "none".
- * This function targets the element with the ID "score-modal" and resets the quiz.
- */
 const closeModal = () => {
   document.getElementById("score-modal").style.display = "none";
   resetQuiz(); // Reset the quiz after closing the modal
 };
 
-/**
- * Resets the quiz by clearing scores and removing styles.
- * This function resets the score and styles of all options.
- */
 const resetQuiz = () => {
   score = 0; // Reset the score
   document.querySelectorAll(".question ul li").forEach((option) => {
     option.classList.remove("correct", "incorrect"); // Remove styles
     option.style.pointerEvents = ""; // Re-enable clicks
-  });
-  document.querySelectorAll(".question").forEach((question) => {
-    // Re-enable clicks for all options in each question
-    question.querySelectorAll("li").forEach((option) => {
-      option.style.pointerEvents = "";
-    });
+    option.style.border = ""; // Reset border styling
   });
 };
 
 // Attach event listeners to each option
-/**
- * Adds a click event listener to each list item within elements that match the selector ".question ul li".
- * When a list item is clicked, the checkAnswer function is called.
- */
 document.querySelectorAll(".question ul li").forEach((option) => {
   option.addEventListener("click", checkAnswer);
 });
