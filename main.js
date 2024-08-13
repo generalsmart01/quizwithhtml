@@ -7,9 +7,26 @@ const totalQuestions = document.querySelectorAll(".question").length;
 // Object to store the correct answers for each question
 // Each key corresponds to a question's ID, and the value is the correct answer
 const correctAnswers = {
-  q1: "Paris",
-  q2: "2",
-  q3: "H2O",
+  q1: "Displays data in the browser's console",
+  q2: "var",
+  q3: "// This is a comment",
+  q4: "Returns the data type of a variable",
+  q5: "function myFunction() {}",
+  q6: "[1, 2, 3]",
+  q7: "array[0]",
+  q8: "'22'",
+  q9: "var obj = {key: value};",
+  q10: "myFunction();",
+  q11: "JSON.stringify()",
+  q12: "===",
+  q13: "false",
+  q14: "array.push(element)",
+  q15: "Object",
+  q16: "A random floating-point number between 0 and 1",
+  q17: "var obj = {};",
+  q18: "The absence of any value or object",
+  q19: "!=",
+  q20: "string1.concat(string2)",
 };
 
 /**
