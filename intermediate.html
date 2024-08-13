@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Example</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="home">
+        <a href="index.html">Go to Home</a>
+    </div>
+    <div class="quiz-container">
+        <div class="question" id="q1">
+            <h3>Question 1: What is the output of <code>console.log(1 + '1')</code> in JavaScript?</h3>
+            <ul>
+                <li>2</li>
+                <li>'1'</li>
+                <li>'11'</li>
+                <li>NaN</li>
+            </ul>
+        </div>
+
+        <div class="question" id="q2">
+            <h3>Question 2: How do you define a class in JavaScript?</h3>
+            <ul>
+                <li>class MyClass {}</li>
+                <li>function MyClass() {}</li>
+                <li>var MyClass = new Class();</li>
+                <li>class: MyClass {}</li>
+            </ul>
+        </div>
+
+        <div class="question" id="q3">
+            <h3>Question 3: What will <code>typeof null</code> return?</h3>
+            <ul>
+                <li>undefined</li>
+                <li>object</li>
+                <li>object</li>
+                <li>null</li>
+            </ul>
+        </div>
+
+        <div class="question" id="q4">
+            <h3>Question 4: Which method is used to add an event listener in JavaScript?</h3>
+            <ul>
+                <li>addListener()</li>
+                <li>attachEvent()</li>
+                <li>addEventListener()</li>
+                <li>onEvent()</li>
+            </ul>
+        </div>
+
+        <div class="question" id="q5">
+            <h3>Question 5: How do you create a promise in JavaScript?</h3>
+            <ul>
+                <li>new Promise((resolve, reject) => {})</li>
+                <li>Promise.create()</li>
+                <li>createPromise()</li>
+                <li>new Promise() {}</li>
+            </ul>
+        </div>
+
+        <div class="question" id="q6">
+            <h3>Question 6: What will <code>Array.isArray([])</code> return?</h3>
+            <ul>
+                <li>true</li>
+                <li>false</li>
+                <li>undefined</li>
+                <li>null</li>
+            </ul>
+        </div>
+
+        <div class="question" id="q7">
+            <h3>Question 7: Which method is used to convert a string to a number?</h3>
+            <ul>
+                <li>Number()</li>
+                <li>parseNumber()</li>
+                <li>convertToNumber()</li>
+                <li>toNumber()</li>
+            </ul>
+        </div>
+
+        <div class="question" id="q8">
+            <h3>Question 8: How do you remove the last element from an array?</h3>
+            <ul>
+                <li>pop()</li>
+                <li>remove()</li>
+                <li>shift()</li>
+                <li>deleteLast()</li>
+            </ul>
+        </div>
+
+        <div class="question" id="q9">
+            <h3>Question 9: What will <code>5 + '5'</code> evaluate to?</h3>
+            <ul>
+                <li>10</li>
+                <li>'10'</li>
+                <li>'55'</li>
+                <li>NaN</li>
+            </ul>
+        </div>
+
+        <div class="question" id="q10">
+            <h3>Question 10: How do you declare a constant variable?</h3>
+            <ul>
+                <li>let constantName;</li>
+                <li>const constantName;</li>
+                <li>var constantName;</li>
+                <li>constant constantName;</li>
+            </ul>
+        </div>
+
+        <div class="question" id="q11">
+            <h3>Question 11: What does the <code>this</code> keyword refer to inside a method?</h3>
+            <ul>
+                <li>The function itself</li>
+                <li>The object that owns the method</li>
+                <li>The parent object</li>
+                <li>The global object</li>
+            </ul>
+        </div>
+
+        <div class="question" id="q12">
+            <h3>Question 12: What will <code>!!0</code> return?</h3>
+            <ul>
+                <li>0</li>
+                <li>false</li>
+                <li>true</li>
+                <li>null</li>
+            </ul>
+        </div>
+
+        <div class="question" id="q13">
+            <h3>Question 13: Which operator is used to check both type and value equality?</h3>
+            <ul>
+                <li>==</li>
+                <li>===</li>
+                <li>=</li>
+                <li>!=</li>
+            </ul>
+        </div>
+
+        <div class="question" id="q14">
+            <h3>Question 14: How do you prevent a function from being executed?</h3>
+            <ul>
+                <li>Use the return statement</li>
+                <li>Throw an error</li>
+                <li>Use a debugger</li>
+                <li>Comment out the function</li>
+            </ul>
+        </div>
+
+        <div class="question" id="q15">
+            <h3>Question 15: What will <code>[1, 2] == [1, 2]</code> return?</h3>
+            <ul>
+                <li>true</li>
+                <li>false</li>
+                <li>false</li>
+                <li>undefined</li>
+            </ul>
+        </div>
+
+        <div class="question" id="q16">
+            <h3>Question 16: Which method is used to remove white spaces from the start and end of a string?</h3>
+            <ul>
+                <li>trimSpaces()</li>
+                <li>strip()</li>
+                <li>trim()</li>
+                <li>clean()</li>
+            </ul>
+        </div>
+
+        <div class="question" id="q17">
+            <h3>Question 17: How do you merge two objects in JavaScript?</h3>
+            <ul>
+                <li>Object.assign({}, obj1, obj2)</li>
+                <li>obj1.merge(obj2)</li>
+                <li>obj1.concat(obj2)</li>
+                <li>Object.merge(obj1, obj2)</li>
+            </ul>
+        </div>
+
+        <div class="question" id="q18">
+            <h3>Question 18: What will <code>typeof []</code> return?</h3>
+            <ul>
+                <li>object</li>
+                <li>array</li>
+                <li>list</li>
+                <li>undefined</li>
+            </ul>
+        </div>
+
+        <div class="question" id="q19">
+            <h3>Question 19: How do you execute a function immediately after defining it?</h3>
+            <ul>
+                <li>Immediately Invoked Function Expression (IIFE)</li>
+                <li>Using the `execute` method</li>
+                <li>Adding parentheses after the function name</li>
+                <li>Calling the function within its own body</li>
+            </ul>
+        </div>
+
+        <div class="question" id="q20">
+            <h3>Question 20: What does <code>Array.prototype.map()</code> do?</h3>
+            <ul>
+                <li>Transforms each element in an array based on a callback function</li>
+                <li>Filters elements in an array</li>
+                <li>Sorts elements in an array</li>
+                <li>Reduces elements in an array</li>
+            </ul>
+        </div>
+
+
+    </div>
+
+    <div id="score-modal" class="modal">
+        <div class="modal-content">
+            <h2>Quiz Completed</h2>
+            <p id="score-text"></p>
+            <button onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="/intermediate.js"></script>
+</body>
+
+</html>
